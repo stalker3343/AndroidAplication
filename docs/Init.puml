@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+ Network <|-  WorkStation
+
+Network <|- User
+
+class Network {
+WorkStation station
+User admin
+}
+
+class User {
+String login
+String password
+}
+
+class WorkStation {
+String id
+WorkStationStatus status
+analyze()
+}
+
+
+enum WorkStationStatus {
+OFFLINE
+ONLINE
+}
+
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+
+@enduml
